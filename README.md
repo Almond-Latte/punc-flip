@@ -94,7 +94,7 @@ This extension contributes the following settings:
   - Options: `"，"` (full-width), `", "` (half-width + space), `","` (half-width only)
 - `punc-flip.periodReplacement`: What to replace Japanese period (。) with (default: "．")
   - Options: `"．"` (full-width), `". "` (half-width + space), `"."` (half-width only)
-- `punc-flip.fileExtensions`: Array of file extensions to apply auto-conversion (default: [".txt", ".md", ".markdown"])
+- `punc-flip.fileExtensions`: Array of file extensions to apply auto-conversion (default: [".txt", ".md", ".markdown", ".tex"])
 - `punc-flip.includePatterns`: Glob patterns for files to include in auto-conversion (e.g., "**/*.txt", "docs/**")
 - `punc-flip.excludePatterns`: Glob patterns for files to exclude from auto-conversion (default: ["**/node_modules/**", "**/.git/**"])
 - `punc-flip.enableForLanguages`: Language IDs to enable auto-conversion for (default: ["plaintext", "markdown"])
@@ -136,7 +136,7 @@ This extension contributes the following settings:
   "punc-flip.convertOnSave": true,
   "punc-flip.commaReplacement": "，",
   "punc-flip.periodReplacement": "．",
-  "punc-flip.fileExtensions": [".txt", ".md", ".markdown"],
+  "punc-flip.fileExtensions": [".txt", ".md", ".markdown", ".tex"],
   "punc-flip.includePatterns": [],
   "punc-flip.excludePatterns": ["**/node_modules/**", "**/.git/**"],
   "punc-flip.enableForLanguages": ["plaintext", "markdown"]
@@ -184,7 +184,7 @@ If auto-conversion doesn't work:
   "punc-flip.convertOnSave": true,
   "punc-flip.commaReplacement": "，",
   "punc-flip.periodReplacement": "．",
-  "punc-flip.fileExtensions": [".txt", ".md", ".markdown"],
+  "punc-flip.fileExtensions": [".txt", ".md", ".markdown", ".tex"],
   "punc-flip.excludePatterns": [
     "**/node_modules/**",
     "**/vendor/**",
@@ -223,7 +223,7 @@ If auto-conversion doesn't work:
   "punc-flip.convertOnSave": true,
   "punc-flip.commaReplacement": ", ",
   "punc-flip.periodReplacement": ". ",
-  "punc-flip.fileExtensions": [".txt", ".md", ".markdown"]
+  "punc-flip.fileExtensions": [".txt", ".md", ".markdown", ".tex"]
 }
 ```
 

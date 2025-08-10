@@ -2,7 +2,7 @@
   "name": "punc-flip",
   "displayName": "Punc Flip",
   "description": "Convert Japanese punctuation marks (、。) to Western punctuation marks (, .) with customizable patterns",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "Almond-Latte",
   "author": "Almond-Latte",
   "license": "MIT",
@@ -32,7 +32,9 @@
     "academic",
     "writing",
     "zenkaku",
-    "hankaku"
+    "hankaku",
+    "latex",
+    "tex"
   ],
   "activationEvents": [],
   "main": "./out/extension.js",
@@ -102,7 +104,7 @@
         },
         "punc-flip.fileExtensions": {
           "type": "array",
-          "default": [".txt", ".md", ".markdown"],
+          "default": [".txt", ".md", ".markdown", ".tex"],
           "description": "File extensions to apply auto-conversion on save"
         },
         "punc-flip.includePatterns": {

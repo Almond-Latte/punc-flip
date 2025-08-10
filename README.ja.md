@@ -89,7 +89,7 @@
   - オプション: `"，"` (全角)、`", "` (半角 + スペース)、`","` (半角のみ)
 - `punc-flip.periodReplacement`: 日本語句点（。）の置換文字（デフォルト: "．"）
   - オプション: `"．"` (全角)、`". "` (半角 + スペース)、`"."` (半角のみ)
-- `punc-flip.fileExtensions`: 自動変換を適用するファイル拡張子の配列（デフォルト: [".txt", ".md", ".markdown"]）
+- `punc-flip.fileExtensions`: 自動変換を適用するファイル拡張子の配列（デフォルト: [".txt", ".md", ".markdown", ".tex"]）
 - `punc-flip.includePatterns`: 自動変換に含めるファイルのGlobパターン（例: "**/*.txt", "docs/**"）
 - `punc-flip.excludePatterns`: 自動変換から除外するファイルのGlobパターン（デフォルト: ["**/node_modules/**", "**/.git/**"]）
 - `punc-flip.enableForLanguages`: 自動変換を有効にする言語ID（デフォルト: ["plaintext", "markdown"]）
@@ -131,7 +131,7 @@
   "punc-flip.convertOnSave": true,
   "punc-flip.commaReplacement": "，",
   "punc-flip.periodReplacement": "．",
-  "punc-flip.fileExtensions": [".txt", ".md", ".markdown"],
+  "punc-flip.fileExtensions": [".txt", ".md", ".markdown", ".tex"],
   "punc-flip.includePatterns": [],
   "punc-flip.excludePatterns": ["**/node_modules/**", "**/.git/**"],
   "punc-flip.enableForLanguages": ["plaintext", "markdown"]
@@ -181,7 +181,7 @@
   "punc-flip.convertOnSave": true,
   "punc-flip.commaReplacement": "，",
   "punc-flip.periodReplacement": "．",
-  "punc-flip.fileExtensions": [".txt", ".md", ".markdown"],
+  "punc-flip.fileExtensions": [".txt", ".md", ".markdown", ".tex"],
   "punc-flip.excludePatterns": [
     "**/node_modules/**",
     "**/vendor/**",
@@ -220,7 +220,7 @@
   "punc-flip.convertOnSave": true,
   "punc-flip.commaReplacement": ", ",
   "punc-flip.periodReplacement": ". ",
-  "punc-flip.fileExtensions": [".txt", ".md", ".markdown"]
+  "punc-flip.fileExtensions": [".txt", ".md", ".markdown", ".tex"]
 }
 ```
 

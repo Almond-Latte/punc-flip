@@ -4,6 +4,16 @@ All notable changes to the "Punc Flip" extension will be documented in this file
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.0.2] - 2025-08-10
+
+### Added
+- Added `.tex` file support to default file extensions for LaTeX users
+- Added `latex` and `tex` keywords for better discoverability
+
+### Changed
+- Updated default `fileExtensions` setting to include `.tex` files: `[".txt", ".md", ".markdown", ".tex"]`
+- Enhanced documentation with LaTeX-specific examples
+
 ## [0.0.1] - 2025-08-10
 
 ### Added
