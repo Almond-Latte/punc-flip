@@ -15,7 +15,7 @@
   },
   "homepage": "https://github.com/Almond-Latte/punc-flip#readme",
   "engines": {
-    "vscode": "^1.85.0"
+    "vscode": "^1.97.0"
   },
   "categories": [
     "Formatters",
