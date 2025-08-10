@@ -1,0 +1,166 @@
+{
+  "name": "punc-flip",
+  "displayName": "Punc Flip",
+  "description": "Convert Japanese punctuation marks (、。) to Western punctuation marks (, .) with customizable patterns",
+  "version": "0.0.1",
+  "publisher": "Almond-Latte",
+  "author": "Almond-Latte",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Almond-Latte/punc-flip"
+  },
+  "bugs": {
+    "url": "https://github.com/Almond-Latte/punc-flip/issues"
+  },
+  "homepage": "https://github.com/Almond-Latte/punc-flip#readme",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Formatters",
+    "Other"
+  ],
+  "keywords": [
+    "japanese",
+    "punctuation",
+    "comma",
+    "period",
+    "converter",
+    "text",
+    "formatting",
+    "academic",
+    "writing",
+    "zenkaku",
+    "hankaku"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "punc-flip.convertSelection",
+        "title": "Convert Selected Japanese Punctuation to Western"
+      },
+      {
+        "command": "punc-flip.convertDocument",
+        "title": "Convert Document Japanese Punctuation to Western"
+      },
+      {
+        "command": "punc-flip.showSettings",
+        "title": "Show Current Settings (Debug)"
+      },
+      {
+        "command": "punc-flip.reloadSettings",
+        "title": "Reload Extension Settings"
+      },
+      {
+        "command": "punc-flip.showOutput",
+        "title": "Show Extension Output"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "punc-flip.convertSelection",
+        "key": "ctrl+shift+j",
+        "mac": "cmd+shift+j",
+        "when": "editorTextFocus && editorHasSelection"
+      },
+      {
+        "command": "punc-flip.convertDocument",
+        "key": "ctrl+alt+shift+j",
+        "mac": "cmd+alt+shift+j",
+        "when": "editorTextFocus"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "punc-flip.convertSelection",
+          "when": "editorHasSelection",
+          "group": "1_modification"
+        }
+      ],
+      "commandPalette": [
+        {
+          "command": "punc-flip.convertSelection",
+          "when": "editorIsOpen"
+        },
+        {
+          "command": "punc-flip.convertDocument",
+          "when": "editorIsOpen"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "Punc Flip",
+      "properties": {
+        "punc-flip.convertOnSave": {
+          "type": "boolean",
+          "default": false,
+          "description": "Automatically convert Japanese punctuation to Western punctuation when saving files"
+        },
+        "punc-flip.fileExtensions": {
+          "type": "array",
+          "default": [".txt", ".md", ".markdown"],
+          "description": "File extensions to apply auto-conversion on save"
+        },
+        "punc-flip.includePatterns": {
+          "type": "array",
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "description": "Glob patterns for files to include in auto-conversion (e.g., '**/*.txt', 'docs/**')"
+        },
+        "punc-flip.excludePatterns": {
+          "type": "array",
+          "default": ["**/node_modules/**", "**/.git/**"],
+          "items": {
+            "type": "string"
+          },
+          "description": "Glob patterns for files to exclude from auto-conversion"
+        },
+        "punc-flip.enableForLanguages": {
+          "type": "array",
+          "default": ["plaintext", "markdown"],
+          "items": {
+            "type": "string"
+          },
+          "description": "Language IDs to enable auto-conversion for (e.g., 'plaintext', 'markdown', 'japanese')"
+        },
+        "punc-flip.commaReplacement": {
+          "type": "string",
+          "enum": [", ", "，", ","],
+          "default": "，",
+          "description": "What to replace Japanese comma (、) with: ', ' (half-width comma + space), '，' (full-width comma), or ',' (half-width comma only)"
+        },
+        "punc-flip.periodReplacement": {
+          "type": "string",
+          "enum": [". ", "．", "."],
+          "default": "．",
+          "description": "What to replace Japanese period (。) with: '. ' (half-width period + space), '．' (full-width period), or '.' (half-width period only)"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.97.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "22.x",
+    "@typescript-eslint/eslint-plugin": "^8.39.0",
+    "@typescript-eslint/parser": "^8.39.0",
+    "eslint": "^9.32.0",
+    "typescript": "^5.9.2",
+    "@vscode/test-cli": "^0.0.11",
+    "@vscode/test-electron": "^2.5.2"
+  }
+}
